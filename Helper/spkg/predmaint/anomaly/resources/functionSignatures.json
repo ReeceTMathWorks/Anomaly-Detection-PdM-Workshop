@@ -1,0 +1,139 @@
+    {
+
+        "anomalyCLI.deepanomaly.TcnDetector.train":
+        {
+            "inputs":
+            [
+                {"name":"detector", "kind":"required", "type":"anomalyCLI.deepanomaly.TcnDetector"},
+                {"name":"trainData", "kind":"required", "type":[["cell"],["timetable"], ["table"], ["numeric", "2d"]]},
+                {"name":"TrainingOpts", "kind":"namevalue", "type":[["nnet.cnn.TrainingOptionsADAM"], ["nnet.cnn.TrainingOptionsSGDM"], ["nnet.cnn.TrainingOptionsRMSProp"]]}
+            ]
+        },
+
+        "anomalyCLI.deepanomaly.DeepantDetector.train":
+        {
+            "inputs":
+            [
+                {"name":"detector", "kind":"required", "type":"anomalyCLI.deepanomaly.DeepantDetector"},
+                {"name":"trainData", "kind":"required", "type":[["cell"],["timetable"], ["table"], ["numeric", "2d"]]},
+                {"name":"TrainingOpts", "kind":"namevalue", "type":[["nnet.cnn.TrainingOptionsADAM"], ["nnet.cnn.TrainingOptionsSGDM"], ["nnet.cnn.TrainingOptionsRMSProp"]]}
+            ]
+        },
+
+        "anomalyCLI.deepanomaly.UsadDetector.UsadDetector.train":
+        { "inputs":
+        [
+            {"name": "detector", "kind": "required", "type":"anomalyCLI.deepanomaly.UsadDetector.UsadDetector"},
+            {"name":"trainData", "kind":"required", "type":[["cell"],["timetable"], ["table"], ["numeric", "2d"]]},
+            {"name": "MaxEpochs", "kind": "namevalue", "type": ["numeric","scalar","positive", "integer"]},
+            {"name": "InitialLearnRate", "kind": "namevalue", "type": ["numeric","scalar","positive"]},
+            {"name": "MiniBatchSize", "kind": "namevalue", "type": ["numeric","scalar","positive", "integer"]},
+            {"name": "Verbose","kind": "namevalue", "type": "logical"},
+            {"name": "Plots","kind": "namevalue", "type": ["choices={'none','training-progress'}"]},
+            {"name": "ExecutionEnvironment","kind": "namevalue", "type": ["choices={'cpu', 'auto', 'gpu', 'multi-gpu'}"]}
+        ]
+        },
+
+        "anomalyCLI.deepanomaly.VaelstmDetector.VaelstmDetector.train":
+        {"inputs":
+        [
+            {"name": "detector", "kind": "required","type": "anomalyCLI.deepanomaly.VaelstmDetector.VaelstmDetector"},
+            {"name":"trainData", "kind":"required", "type":[["cell"],["timetable"], ["table"], ["numeric", "2d"]]},
+            {"name":"TrainingOpts", "kind":"namevalue", "type":[["nnet.cnn.TrainingOptionsADAM"], ["nnet.cnn.TrainingOptionsSGDM"], ["nnet.cnn.TrainingOptionsRMSProp"]]},
+            {"name": "VaeMaxEpochs", "kind": "namevalue", "type": ["numeric","scalar","positive", "integer"]},
+            {"name": "VaeInitialLearnRate", "kind": "namevalue","type": ["numeric","scalar","positive"]}
+        ]
+        },
+
+        
+        "syntheticAnomaly":
+        {"inputs":
+        [
+            {"name":"AnomalyType", "kind":"required", "type":["choices={'Noise'}"]},
+            {"name":"Distribution", "kind":"namevalue", "type":["choices={'Gaussian', 'Uniform', 'Laplacian'}"]},
+            {"mutuallyExclusiveGroup":
+            [
+                [
+                    {"name":"Type", "kind":"namevalue", "type":["choices={'FullWindow'}"]},
+                    {"name":"Mean", "kind":"namevalue", "type":[["scalar"]]},
+                    {"name":"Std", "kind":"namevalue", "type":[["scalar"]]}
+                ],
+                [
+                    {"name":"Type", "kind":"namevalue", "type":["choices={'Burst'}"]},
+                    {"name":"Mean", "kind":"namevalue", "type":[["scalar"]]},
+                    {"name":"Std", "kind":"namevalue", "type":[["scalar"]]},
+                    {"name":"NumBursts", "kind":"namevalue", "type":["scalar"]},
+                    {"name":"BurstDuration", "kind":"namevalue", "type":["scalar"]}
+                ]
+            ]
+            }
+        ]
+        },
+        
+        "syntheticAnomaly":
+        {"inputs":
+        [
+            {"name":"AnomalyType", "kind":"required", "type":["choices={'Bias'}"]},
+            {"name":"Type", "kind":"namevalue", "type":["choices={'Constant', 'Proportional'}"]},
+            {"name":"Offset", "kind":"namevalue", "type":[["scalar"]]}               
+        ]
+        },
+        
+        "syntheticAnomaly":
+        {"inputs":
+        [
+            {"name":"AnomalyType", "kind":"required", "type":["choices={'Drift'}"]},
+            {"name":"Type", "kind":"namevalue", "type":["choices={'Linear', 'Exponential', 'Quadratic'}"]},            
+            {"name":"Scale", "kind":"namevalue", "type":[["scalar"]]}               
+        ]
+        },
+        
+        "syntheticAnomaly":
+        {"inputs":
+        [
+            {"name":"AnomalyType", "kind":"required", "type":["choices={'StuckAtConstant'}"]},
+            {"name":"Type", "kind":"namevalue", "type":["choices={'Random', 'Max', 'Min'}"]}
+        ]
+        },
+
+        "syntheticAnomaly":
+        {"inputs":
+        [
+            {"name":"AnomalyType", "kind":"required", "type":["choices={'StuckAtConstant'}"]},
+            {"name":"Type", "kind":"namevalue", "type":["choices={'Custom'}"]},
+            {"name":"Value", "kind":"namevalue", "type":[["scalar"]]}            
+        ]
+        },
+
+        "syntheticAnomaly":
+        {"inputs":
+        [
+            {"name":"AnomalyType", "kind":"required", "type":["choices={'PointOutliers'}"]},
+            {"name":"NumOutliers", "kind":"namevalue", "type":["scalar"]},
+            {"name":"Scale", "kind":"namevalue", "type":["scalar"]}               
+        ]
+        },
+        
+        "syntheticAnomaly":
+        {"inputs":
+        [
+            {"name":"AnomalyType", "kind":"required", "type":["choices={'Warp'}"]},
+            {"name":"Algorithm", "kind":"namevalue", "type":["choices={'GPR', 'Spline'}"]},
+            {"name":"Scale", "kind":"namevalue", "type":["scalar"]}
+        ]
+        },
+        
+        "anomalyCLI.syntheticanomalygen.AbstractAnomaly.injectAnomaly":
+        {"inputs":
+        [
+            {"name":"AnomalyType", "kind":"required"},
+            {"name":"inTS", "kind":"required", "type":["vector"]},
+            {"name":"WindowLength", "kind":"namevalue", "type":["numeric", "vector", "scalar"]},
+            {"name":"WindowStart", "kind":"namevalue", "type":[["numeric", "vector", "scalar"],["choices={'Random'}"]]},
+            {"name":"EdgeContinuity", "kind":"namevalue", "type":["logical"]},
+            {"name":"TransitionLength", "kind":"namevalue", "type":["numeric", "scalar", "positive", "integer"]},
+            {"name":"LabelAggregation", "kind":"namevalue", "type":["logical"]},
+            {"name":"UseParallel", "kind":"namevalue", "type":["choices={'Auto', 'On', 'Off'}"]}            
+        ]
+        }
+    }

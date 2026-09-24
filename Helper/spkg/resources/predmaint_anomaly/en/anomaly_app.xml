@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rsccat version="1.0" locale="en_US" product="predmaint_anomaly" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/msgcat.xsd">
+    <!-- Copyright 2024-2026 The MathWorks, Inc. -->
+    <message>
+        <!-- App Gallery strings for anomaly detection apps -->
+        <entry key="Tool_TimeSeriesAnomalyDetector_Label">Time Series Anomaly Detector</entry>
+        <entry key="Tool_TimeSeriesAnomalyDetector_Description">Train models to detect anomalies in time series data (timeSeriesAnomalyDetector)</entry>
+
+        <!-- Time series anomaly detection app -->
+        <entry key="strAnomalyAppTitle">Time Series Anomaly Detector</entry>
+        <entry key="strCloseDlgTitle">Confirm App Close</entry>
+        <entry key="msgConfirmAllClose">All results will be lost unless exported or saved to a session.\nDo you want to continue with closing the app?</entry>
+        <entry key="msgConfirmNewSession">Starting a new session will clear existing data sets and detectors. Do you want to continue?</entry>
+        <entry key="strNewSessionConfirmTitle">New Session</entry>
+        <entry key="strClearingDataTitle">Clearing Session Data</entry>
+        <entry key="msgClearingSessionData">Clearing previous session data sets and detectors...</entry>
+        <entry key="strGettingStarted">Getting Started</entry>
+        <entry key="strGettingStartedInfo">Use the toolstrip above to configure and train anomaly detectors.</entry>
+        <entry key="errSessionNameNotString">Invalid input argument: Expected session name to be a string or character vector.</entry>
+        <entry key="errCannotFindSessionFile">The specified session file cannot be found. The session file must be a .MLDATX file created by the Time Series Anomaly Detector app.</entry>
+
+        <!-- Home tab -->
+        <entry key="strHomeTabTitle">Anomaly Detector</entry>
+        <entry key="strSaveSession">Save\nSession</entry>
+        <entry key="strSavingSession">Saving session data...</entry>
+        <entry key="strSaveSessionError">Save Session Error</entry>
+        <entry key="strSuccessfulSave">Successfully saved session {0}</entry>
+        <entry key="strLoadSession">Load\nSession</entry>
+        <entry key="msgConfirmLoadSession">All existing results will be cleared when a saved session is loaded.\nDo you want to continue?</entry>
+        <entry key="strLoadingSession">Loading session data...</entry>
+        <entry key="strLoadSessionError">Load Session Error</entry>
+        <entry key="errInvalidSessionFile">The specified file does not contain valid session data for the Time Series Anomaly Detector app.</entry>
+        <entry key="strSuccessfulLoad">Successfully loaded session {0}</entry>
+
+        <!-- Train tab -->
+        <entry key="strDuplicate">Duplicate</entry>
+        <entry key="strDuplicateDetector">Duplicate\nDetector</entry>
+        <entry key="tipDuplicateDetector">Save the current detector to a new detector</entry>
+        <entry key="strDetector">Detector</entry>
+        <entry key="strTrainingData">Training Data Set</entry>
+        <entry key="tipTrainingData">Selected training data set</entry>
+        <entry key="strDetectionData">Detection Data Set</entry>
+        <entry key="tipDetectionData">Select a data set for detection</entry>
+        <entry key="tipSelectedDetector">Selected detector</entry>
+        <entry key="strDataSection">Data and Detector</entry>
+
+        <!-- File section -->
+        <entry key="strFile">File</entry>
+        <entry key="strNewSessionButton">New\nSession</entry>
+        <entry key="tipNewSessionButton">Create a new session</entry>
+        <entry key="strImportDataButton">Import\nData</entry>
+        <entry key="tipImportDataButton">Import data for training or detection</entry>
+
+        <!-- Plot section -->
+        <entry key="strPlot">Plot</entry>
+        <entry key="strPlots">Plots</entry>
+        <entry key="strPlotDataButton">Plot\nData</entry>
+        <entry key="tipPlotDataButton">Plot selected data set</entry>
+
+        <!-- Detectors section -->
+        <entry key="strDetectors">Detectors</entry>
+        <entry key="strAllDetectors">All</entry>
+        <entry key="tipAllDetectors">Train all available detectors</entry>
+        <entry key="strQuickDetectors">All Quick-to-Train</entry>
+        <entry key="tipQuickDetectors">Train a selection of detectors that are fast to train</entry>
+        <entry key="strGetStartedCategory">Get Started</entry>
+        <entry key="strCLCategory">Statistical Detectors</entry>
+        <entry key="strMLCategory">Machine Learning Detectors</entry>
+        <entry key="strDLCategory">Deep Learning Detectors</entry>
+        <entry key="strAllMLDetectors">All ML Detectors</entry>
+        <entry key="tipAllMLDetectors">Train all available machine learning detectors</entry>
+        <entry key="strAllDLDetectors">All DL Detectors</entry>
+        <entry key="tipAllDLDetectors">Train all available deep learning detectors</entry>
+        <entry key="tipDLTUnavailable">Deep Learning Toolbox is required to use deep learning detectors.</entry>
+
+        <!-- Train section -->
+        <entry key="strTrain">Train</entry>
+        <entry key="tipTrainButton">Train selected detector</entry>
+        <entry key="strRetrain">Retrain</entry>
+        <entry key="tipRetrainButton">Retrain selected detector</entry>
+
+        <!-- Analysis section -->
+        <entry key="strAnalysis">Analysis</entry>
+
+        <!-- Export section -->
+        <entry key="strExport">Export</entry>
+        <entry key="tipExportDetectorButton">Export the selected detector to the Workspace to detect anomalies in new data</entry>
+        <entry key="tipExportSelectedDetectors">Select detectors to export to the Workspace to detect anomalies in new data</entry>
+        <entry key="strExportDetectorsHeader">Detectors</entry>
+        <entry key="strExportSelectedDetectorsItem">Selected Detectors</entry>
+        <entry key="strDetectorExported">The detector "{0}" was exported to the Workspace as "{1}".</entry>
+        <entry key="strExportDetectorButton">Export\nDetector</entry>
+        <entry key="strExportTrainedDetectorsItem">All Trained Detectors</entry>
+        <entry key="tipExportTrainedDetectors">Export all trained detectors to the Workspace to detect anomalies in new data</entry>
+        <entry key="strWarnNoTrainedDetectors">There are no trained detectors to export.</entry>
+        <entry key="strExportResults">Export Detection Results</entry>
+        <entry key="tipExportResultsSingle">Export the predicted anomaly labels for the selected detector and data to the Workspace</entry>
+        <entry key="tipExportResultsMultiple">Export predicted anomaly labels for the selected data to the Workspace</entry>
+        <entry key="strExportResultsHeader">Detection Results</entry>
+
+        <!-- Data set browser -->
+        <entry key="strDatasetsTitle">Data Sets</entry>
+        <entry key="strNameTitle">Name</entry>
+        <entry key="strStatusTitle">Status</entry>
+        <entry key="strLabeled">Labeled</entry>
+        <entry key="strUnlabeled">Unlabeled</entry>
+        <entry key="strMoreOptions">More options</entry>
+        <entry key="tipTrainingDataset">The app uses this data set for training any detector.</entry>
+        <entry key="msgImportToGetStarted">Import data sets to get started</entry>
+        <entry key="strPlotItem">Plot</entry>
+        <entry key="strDeleteItem">Delete</entry>
+        <entry key="tipDeleteDatasetDisabled">The training data set cannot be deleted</entry>
+
+        <!-- Detectors browser -->
+        <entry key="strDetectorsTitle">Detectors</entry>
+        <entry key="msgAddDetectorToGetStarted">Add a detector from the toolstrip to get started</entry>
+        <entry key="strTrained">Trained</entry>
+        <entry key="strUntrained">Draft</entry>
+        <entry key="strSortby">Sort by</entry>
+        <entry key="strSortbyOldestFirst">Oldest First</entry>
+        <entry key="strSortbyNewestFirst">Newest First</entry>
+        <entry key="strSortbyFavorites">Favorites</entry>
+        <entry key="strSortbyName">Name</entry>
+        <entry key="strFavorite">Favorite</entry>
+        <entry key="strOpenTrainingItem">Train</entry>
+        <entry key="strOpenDetectionItem">Detect</entry>
+        <entry key="strDuplicateItem">Duplicate</entry>
+        <entry key="tipTrainMenuItemDisabled">Only one detector at a time can be opened for training</entry>
+        <entry key="tipDetectMenuItemDisabled_Multiple">Only one detector at a time can be opened for detection</entry>
+        <entry key="tipDetectMenuItemDisabled_Untrained">Only trained detectors can be opened for detection</entry>
+
+        <!-- Import dialog -->
+        <entry key="strImportDataTitle">Import Data</entry>
+        <entry key="warnNoChannelSelected">Select at least one channel from the data set</entry>
+        <entry key="strSelectFromDataset">Select channels from data set "{0}"</entry>
+        <entry key="strSelectInitialDataset">Select a data set to import</entry>
+        <entry key="strSelectDatasetDefault">Select a data set...</entry>
+        <entry key="strSelectLabelVariable">Label variable:</entry>
+        <entry key="strValidationDataPercentage">Validation data percentage:</entry>
+        <entry key="strSelectAdditionalDatasets">Select additional data sets to import</entry>
+        <entry key="warnDatasetCompatibility">Data sets compatible with the initial data set are shown below</entry>
+        <entry key="tipDatasetCompatibility">Compatible data sets have the same data type and contain at least the same channels</entry>
+        <entry key="strLabelVarTitle">Anomaly Label Variable</entry>
+        <entry key="msgSelectDatasetToLeft">Select a data set to import using the panel to the left</entry>
+        <entry key="strColumn">Column</entry>
+        <entry key="strDatasetValue">Data set: {0}</entry>
+        <entry key="strCurrentDataFormat">Current data format</entry>
+        <entry key="strRefresh">Refresh</entry>
+        <entry key="strAddMoreDatasetsButton">Add more data sets</entry>
+        <entry key="strDatasetNotFound">Data Set Not Found</entry>
+        <entry key="strSkipOpt">Skip</entry>
+        <entry key="strCancelOpt">Cancel</entry>
+        <entry key="strContinueOpt">Continue</entry>
+        <entry key="errDatasetNotFound">The data set "{0}" was not found in the Workspace</entry>
+        <entry key="msgSkipMissingDatasets">The following data sets were not found in the Workspace. Skip these data sets?\n\n{0}</entry>
+        <entry key="strInvalidLabelVariable">Invalid Label Vector</entry>
+        <entry key="msgSkipInvalidLabels">The labels for data set "{0}" are not valid. The label variable must be the same type as the specified normal class label and cannot have missing or infinite values. Do you want to skip the data set or import it as unlabeled?</entry>
+        <entry key="msgSkipInvalidMembers">The data set "{0}" contains missing, infinite, or non-numeric data in some of its cells. Do you want to continue by importing only the valid cells or skip the data set?</entry>
+        <entry key="msgSkipInvalidDataSet">The data set "{0}" contains missing, infinite, or non-numeric data. Skip the data set?</entry>
+        <entry key="strInvalidData">Invalid Data</entry>
+        <entry key="strImportingData">Importing data...</entry>
+        <entry key="strImportingDataSet">Importing data set "{0}"...</entry>
+        <entry key="strImportingDataSetXOfY">Importing data set "{0}"...\nCompleted {1} of {2}...</entry>
+        <entry key="strDefineNormalClassLabel">Define the normal class label</entry>
+        <entry key="strDefineNormalClassLabelForVar">Define the normal class label for variable "{0}"</entry>
+        <entry key="strNormalClassLabel">Normal class label</entry>
+        <entry key="strImportError">Error Importing Data</entry>
+        <entry key="errInconsistentCellFormats">The data set "{0}" contains cells with inconsistent formats. The data set cannot be imported.</entry>
+
+        <!-- Export Detectors Dialog -->
+        <entry key="strExportDetectors">Export Detectors</entry>
+
+        <!-- Export Results Dialog -->
+        <entry key="strSelectResultsToExport">Select detection results to export</entry>
+        <entry key="tipSelectResultsToExport">Only detectors with results for the selected data set are shown</entry>
+        <entry key="strLabelOptions">Label Options</entry>
+        <entry key="strLabelResolution">Exported label resolution</entry>
+        <entry key="strSample">Sample</entry>
+        <entry key="strWindow">Window</entry>
+        <entry key="strIncludeGroundTruth">Include ground truth labels</entry>
+        <entry key="strWinStartIndices">Start Indices</entry>
+        <entry key="strSampleIndices">Sample Indices</entry>
+        <entry key="strPredictedLabels">Predicted Labels</entry>
+        <entry key="strGroundTruthLabels">Ground Truth Labels</entry>
+        <entry key="strResults">Results</entry>
+        <entry key="strExportError">Export Error</entry>
+        <entry key="errNoDetectionResults">No detection results exist for the selected data set.</entry>
+        <entry key="strResultsExported">Detection results for "{0}" were successfully exported to the Workspace.</entry>
+
+        <!-- Training Progress Dialog -->
+        <entry key="strTrainingProgress">Training Progress</entry>
+        <entry key="strTrainMetricsSuccess">All metrics computed successfully.</entry>
+        <entry key="strTrainMetricsFail">Not enough data to compute all metrics.</entry>
+
+        <!-- Time Series Plots -->
+        <entry key="strPlotOptions">Plot Options</entry>
+        <entry key="strSelectChannelsToView">Select channels to view from data set: {0}</entry>
+        <entry key="strSelectAll">Select all</entry>
+        <entry key="strUnselectAll">Unselect all</entry>
+        <entry key="strChannelHeader">Channel</entry>
+        <entry key="strShowLabeledAnomalies">Show labeled anomalies</entry>
+        <entry key="strPlotDocumentDescription">Plot of data set: {0}</entry>
+        <entry key="strData">Data</entry>
+        <entry key="strMember">Member</entry>
+        <entry key="strNormalize">Normalize</entry>
+        <entry key="strNormalizationMethod">Normalization method</entry>
+        <entry key="strMemberXOfY">Member {0} of {1}</entry>
+        <entry key="strZoomLocation">Zoom Location</entry>
+        <entry key="strZoomView">Anomaly Zoom View</entry>
+
+        <!-- Training -->
+        <entry key="strModel">Model</entry>
+        <entry key="strOverviewTitle">Overview</entry>
+        <entry key="strTrainingMetricsTitle">Validation Metrics</entry>
+        <entry key="strValidationScoreDistributionTitle">Validation Anomaly Score Distribution</entry>
+        <entry key="strScoreDistributionTitle">Data set Metrics</entry>
+        <entry key="strTrainingLossFcnTitle">Training Loss</entry>
+        <entry key="strDetectionTechniqueTitle">Detection Technique</entry>
+        <entry key="strBestSuitedForTitle">Best Suited For</entry>
+        <entry key="strDetectorTuningTitle">Detector Tuning Tips</entry>
+
+        <entry key="descSpc">Statistical process control model leverages control rules for detecting anomalies.</entry>
+        <entry key="descTcn">Uses a Temporal Convolutional Network to reconstruct normal sequences and scores anomalies by reconstruction error.</entry>
+        <entry key="descUsad">Combines autoencoder reconstruction and adversarial training to model normal patterns and scores anomalies using reconstruction-based and discriminator-based errors.</entry>
+        <entry key="descDeepAnT">Forecasts future subsequences using a CNN-based model and scores anomalies by prediction error.</entry>
+        <entry key="descVaelstm">Uses a variational LSTM autoencoder to learn probabilistic reconstructions of normal sequences and scores anomalies by reconstruction error and latent distribution deviation.</entry>
+        <entry key="descIforest">Uses isolation trees to model normal features and scores anomalies by ease of isolation.</entry>
+        <entry key="descRrcforest">Builds a forest of random cut trees summarizing normal feature distribution and scores anomalies by measuring how much a point disrupts the tree structure.</entry>
+        <entry key="descLof">Estimates local density for each windowed feature set and scores anomalies by comparing a point’s density to that of its neighbors using the Local Outlier Factor algorithm.</entry>
+        <entry key="descCnnae">Reconstruct normal sequences with a CNN autoencoder and scores anomalies by reconstruction error.</entry>
+        <entry key="descLstmae">Reconstruct normal sequences with an LSTM autoencoder and scores anomalies by reconstruction error.</entry>
+        <entry key="descLstmf">Predicts future values using an LSTM forecaster and scores anomalies by deviation between predicted and actual values.</entry>
+        <entry key="descOcsvm">Computes a boundary around normal feature patterns using One-Class SVM and scores anomalies based on their distance from this boundary.</entry>
+
+        <entry key="bestSuitedSpc">Time series with stable mean/variance where detecting amplitude deviations, shifts, or runs beyond control limits are required.</entry>
+        <entry key="bestSuitedTcn">Time series with longer-range structure, contextual anomalies, or sequence-level trends.</entry>
+        <entry key="bestSuitedUsad">Time series with both point‑ and subsequence‑level anomalies, requiring robust reconstruction without overfitting.</entry>
+        <entry key="bestSuitedDeepAnT">Time series with short-range repeating patterns.</entry>
+        <entry key="bestSuitedVaelstm">Time series with complex, nonlinear trends and uncertainty.</entry>
+        <entry key="bestSuitedIforest">Time series with anomalies that are sparse, and varied.</entry>
+        <entry key="bestSuitedRrcforest">Time series with anomalies that may be subtle, context-dependent, or occur in clusters, especially when robustness to noise and irregular patterns is important.</entry>
+        <entry key="bestSuitedLof">Time series with clustered features and local density variations.</entry>
+        <entry key="bestSuitedCnnae">Time series with short‑range, repeating patterns and shape‑based anomalies in fixed‑length windows.</entry>
+        <entry key="bestSuitedLstmae">Time series  with long-term dependencies and contextual anomalies where capturing temporal order is critical.</entry>
+        <entry key="bestSuitedLstmf">Time series with long‑term temporal dependencies and contextual anomalies identifiable via forecast deviation.</entry>
+        <entry key="bestSuitedOcsvm">Time series with relatively stationary behavior and compact, well‑bounded feature distributions.</entry>
+
+        <entry key="tuningRecommendationSpc">Adjust window length to capture normal variability, method for spikes or gradual shifts and lambda for trend detection.</entry>
+        <entry key="tuningRecommendationTcn">Tune number of layers and filter size first, then adjust sequence length and learning rate.</entry>
+        <entry key="tuningRecommendationUsad">Adjust number of latent features first, then reconstruction loss weight, then learning rate.</entry>
+        <entry key="tuningRecommendationDeepAnT">Adjust max epochs and learning rate, then adjust observation window length.</entry>
+        <entry key="tuningRecommendationVaelstm">Increase latent dimension first, then max epochs, then sequence length and learning rate.</entry>
+        <entry key="tuningRecommendationIforest">Increase number of learners and number of observations per learner, then window length.</entry>
+        <entry key="tuningRecommendationRrcforest">Increase number of learners and number of observations per learner, then window length.</entry>
+        <entry key="tuningRecommendationLof">Increase Number of Neighbors and window length, then search method and distance.</entry>
+        <entry key="tuningRecommendationCnnae">Increase number of convolutional layers first, then kernel size, then batch size and learning rate.</entry>
+        <entry key="tuningRecommendationLstmae">Increase LSTM hidden units first, then sequence length, then epochs and learning rate.</entry>
+        <entry key="tuningRecommendationLstmf">Adjust forecast horizon first, then hidden units, then learning rate and sequence length.</entry>
+        <entry key="tuningRecommendationOcsvm">Adjust window length and training iterations, then Beta and Gradient Tolerances.</entry>
+
+        <entry key="descTraining">Training of model {0}</entry>
+        <entry key="descDetection">Detection using model {0}</entry>
+        <entry key="strConfig">Configurations</entry>
+        <entry key="strRevert">Revert</entry>
+        <entry key="strTrainingOptions">Training Configurations</entry>
+        <entry key="strModelOptions">Model Configurations</entry>
+        <entry key="strMaxEpochs">Max epochs</entry>
+        <entry key="strInLR">Initial learn rate</entry>
+        <entry key="strMiniBatchSize">Mini-batch size</entry>
+        <entry key="strModelOptionsTitle">Model Configurations</entry>
+        <entry key="strNormalizeData">Normalize data</entry>
+        <entry key="strZscore">zscore</entry>
+        <entry key="strRange">range</entry>
+        <entry key="strOff">off</entry>
+        <entry key="strAdvancedOptions">Advanced Configurations</entry>
+        <entry key="strFilterSize">Filter size</entry>
+        <entry key="strNumFilters">Number of filters</entry>
+        <entry key="strDropProb">Dropout probability</entry>
+        <entry key="strObservWL">Observation window length</entry>
+        <entry key="strTrainingStride">Training stride</entry>
+        <entry key="strLatentSpace">Latent space size</entry>
+        <entry key="strDetectWL">Detection window length</entry>
+        <entry key="strVaeMaxEpochs">VAE max epochs</entry>
+        <entry key="strLstmMaxEpochs">LSTM max epochs</entry>
+        <entry key="strVaeInLR">VAE initial learn rate</entry>
+        <entry key="strLstmInLR">LSTM initial learn rate</entry>
+        <entry key="strNumDownSample">Number of down sample layers</entry>
+        <entry key="strNumHU">Number of hidden units</entry>
+        <entry key="strDownsampleFactor">Downsampling Factor</entry>
+        <entry key="strEncoderHU">Encoder hidden units</entry>
+        <entry key="strDecoderHU">Decoder hidden units</entry>
+        <entry key="strForecastSteps">Forecast steps</entry>
+        <entry key="strExecEnv">Execution environment</entry>
+        <entry key="strContamFrac">Contamination fraction</entry>
+        <entry key="strNumLearn">Number of learners</entry>
+        <entry key="strNumObLearn">Number of observations per learner</entry>
+        <entry key="strUseParallel">Use parallel</entry>
+        <entry key="strMaximal">maximal</entry>
+        <entry key="strAverage">average</entry>
+        <entry key="strKernelScale">Kernel scale</entry>
+        <entry key="strLambda">Lambda</entry>
+        <entry key="strNumExpanDim">Number of expansion dimensions</entry>
+        <entry key="strNumNeigh">Number of neighbors</entry>
+        <entry key="strDistance">Distance</entry>
+        <entry key="strCollDisp">Collusive displacement</entry>
+        <entry key="strDetectionConfig">Detection Options</entry>
+        <entry key="strDetectionStride">Detection stride</entry>
+        <entry key="strWinLossAggre">Window loss aggregation</entry>
+        <entry key="strThreshold">Threshold</entry>
+        <entry key="strThresMethod">Threshold method</entry>
+        <entry key="strThresParam">Threshold parameter</entry>
+        <entry key="strAlpha">Alpha</entry>
+        <entry key="strBeta">Beta</entry>
+        <entry key="strIterLimit">Iteration limit</entry>
+        <entry key="strBetaTol">Beta tolerance</entry>
+        <entry key="strGradientTol">Gradient tolerance</entry>
+        <entry key="strNormalization">Normalization</entry>
+        <entry key="strFeatureExtraction">Feature extraction</entry>
+        <entry key="strManual">manual</entry>
+        <entry key="strMean">mean</entry>
+        <entry key="strMax">max</entry>
+        <entry key="strMedian">median</entry>
+        <entry key="strKSigma">kSigma</entry>
+        <entry key="strWinLength">Window length</entry>
+        <entry key="strIncludeTies">Include ties</entry>
+        <entry key="strSearchMthd">Search method</entry>
+        <entry key="strFalse">false</entry>
+        <entry key="strTrue">true</entry>
+        <entry key="strKdtree">kdtree</entry>
+        <entry key="strExhaustive">exhaustive</entry>
+        <entry key="strEuclidean">euclidean</entry>
+        <entry key="strFasteuclidean">fasteuclidean</entry>
+        <entry key="strMahalanobis">mahalanobis</entry>
+        <entry key="strMinkowski">minkowski</entry>
+        <entry key="strChebychev">chebychev</entry>
+        <entry key="strCityblock">cityblock</entry>
+        <entry key="strCorrelation">correlation</entry>
+        <entry key="strCosine">cosine</entry>
+        <entry key="strSpearman">spearman</entry>
+        <entry key="strYes">yes</entry>
+        <entry key="strNo">no</entry>
+        <entry key="strAuto">auto</entry>
+        <entry key="strCpu">cpu</entry>
+        <entry key="strGpu">gpu</entry>
+        <entry key="strMultigpu">multi-gpu</entry>
+        <entry key="strParallelauto">parallel-auto</entry>
+        <entry key="strParallelcpu">parallel-cpu</entry>
+        <entry key="strParallelgpu">parallel-gpu</entry>
+        <entry key="strObsWindLength">Observation window length</entry>
+        <entry key="strMin">min</entry>
+        <entry key="strStride">Stride</entry>
+        <entry key="strIndividual">individual</entry>
+        <entry key="strEwma">ewma</entry>
+        <entry key="strDetectionRule">Detection rules</entry>
+        <entry key="strLevel">Level</entry>
+        <entry key="strCenterLine">Center line</entry>
+        <entry key="strStandardError">Standard error</entry>
+        <entry key="strSigma">Sigma</entry>
+        <entry key="strMethod">Method</entry>
+        <entry key="strSolverName">Solver name</entry>
+        <entry key="strSolverSgdm">sgdm</entry>
+        <entry key="strSolverAdam">adam</entry>
+        <entry key="strSolverRmsprop">rmsprop</entry>
+        <entry key="strSolverLbfgs">lbfgs</entry>
+        <entry key="strSolverLm">lm</entry>
+        <entry key="warnTrainingConfigDirty">The train configuration has changed. Re-run Train for updated results.</entry>
+        <entry key="warnTrainingConfigDirtyFromDefault">The train configuration has changed from the default.</entry>
+        <entry key="msgTrainingConfigNotDirty">The training results are up-to-date.</entry>
+        <entry key="msgPressTrain">Press Train to train the detector.</entry>
+        <entry key="strUnsupervisedTrainingMetricsTitle">Unsupervised Training Metrics</entry>
+        <entry key="errInsufficientDataForValidation">Insufficient data for computing validation metrics. Increase hold out percentage or decrease window length.</entry>
+        <entry key="errGenericValidationError">Validation data metrics computation ran into an error.</entry>
+        <entry key="strModelTraining">Model Training</entry>
+        <entry key="strValidationError">Validation Error</entry>
+        <entry key="strTrainingError">Training Error</entry>
+        <entry key="msgTrainingError">Training ran into an error:\n{0}</entry>
+        <entry key="strModelValidation">Model Validation</entry>
+        <entry key="strValidationInProgress">Validation in progress...</entry>
+        <entry key="strTrainingInProgress">Training in progress...</entry>
+        <entry key="strMultiMemberValidation">Aggregate validation metrics computed using {0}% of members ({1} of {2}).</entry>
+        <entry key="strSingleMemberValidation">Metrics computed using {0}% of time series for validation ({1} time steps).</entry>
+
+        <!-- Detection -->
+        <entry key="strDetect">Detect</entry>
+        <entry key="tipDetectButton">Detect anomalies using the trained detector</entry>
+        <entry key="strDetectionMetricsTitle">Per-Member Metrics</entry>
+        <entry key="strTimeSeriesAnomaliesTitle">Time Series Anomalies</entry>
+        <entry key="strAnomalyScoresTitle">Anomaly Scores</entry>
+        <entry key="warnDetectionConfigDirty">The detection configuration has changed. Re-run detection to apply the changes and update results.</entry>
+        <entry key="warnDetectionConfigDirtyFromDefault">The detection configuration has changed from the default.</entry>
+        <entry key="msgDetectionConfigNotDirty">The detection results are up-to-date.</entry>
+        <entry key="msgMustTrainBeforeDetect">The selected detector cannot be used for detection until it is trained.</entry>
+        <entry key="msgPressDetect">Press Detect to find anomalies.</entry>
+        <entry key="msgDetectorRetrained">The selected detector has been re-trained. Re-run detection for updated results.</entry>
+        <entry key="msgDetectorDirtySinceExecution">Detection results were computed with a previous configuration of the detector. Re-run detection for updated results.</entry>
+        <entry key="strDataSets">Data Sets</entry>
+        <entry key="strMembers">Members</entry>
+        <entry key="strSummaryTableTip">Select row to visualize detection results for data set</entry>
+        <entry key="strAccuracy">Accuracy</entry>
+        <entry key="strF1Score">F1 Score</entry>
+        <entry key="strFPRate">False Positive Rate</entry>
+        <entry key="strPrecision">Precision</entry>
+        <entry key="strRecall">Recall</entry>
+        <entry key="strAvgAnomalySeparation">Average Anomaly Separation</entry>
+        <entry key="strFracOfAnomaly">Fraction of Anomalies</entry>
+        <entry key="strKLDivergence">KL Divergence</entry>
+        <entry key="strNormalScoreRng">Normal Scores Range</entry>
+        <entry key="strAnomalyScore">Anomaly Score</entry>
+        <entry key="strAnomalyLocation">Anomaly Location</entry>
+        <entry key="strConfusionMatrixUnavailable">Confusion matrix is not available for unlabeled data.</entry>
+        <entry key="strAnomalyDetection">Anomaly Detection</entry>
+        <entry key="strDetecting">Detecting...</entry>
+        <entry key="strDetectionError">Detection Error</entry>
+        <entry key="msgDetectionError">Detection ran into an error:\n{0}</entry>
+
+        <!-- Compare -->
+        <entry key="strCompare">Compare</entry>
+        <entry key="tipCompareButton">Compare anomalies detected by trained detectors</entry>
+        <entry key="msgNoModelsToCompare">Train a detector before comparing.</entry>
+        <entry key="msgNoLabeledDataForCompare">Select a labeled data set to use for comparison.</entry>
+        <entry key="msgPressCompare">Press Compare to generate detection results for comparison.</entry>
+        <entry key="msgCompareResultsDirty">Results were computed with a previous configuration of the detector. Re-run compare for updated results.</entry>
+        <entry key="strDetectorDetailsTitle">Selected Detector Details</entry>
+        <entry key="strComparisonConfig">Comparison Options</entry>
+
+        <!-- Backend -->
+        <entry key="errEmptyData">Data cannot be empty.</entry>
+        <entry key="errInvalidData">The provided data is not valid. Data must be a matrix, timetable, cell array of matrices, or cell array of timetables.</entry>
+        <entry key="errInvalidDataCell">At least one cell of data is not valid. Each cell must be a matrix or timetable.</entry>
+        <entry key="errDataStoreKeyExists">Key {0} already exists.</entry>
+        <entry key="errDataStoreKeyNotFound">Key {0} does not exist.</entry>
+        <entry key="errSetDataWithoutMetadata">Data cannot be set for a data set without also setting the metadata.</entry>
+        <entry key="errSetLabelsWithoutData">Labels cannot be set for a data set without also setting the data.</entry>
+        <entry key="errSetLabeledDataWithoutLabels">If labels exist, they must be set when setting the data for a data set.</entry>
+
+        <!-- Detectors -->
+        <entry key="strSPC">Statistical Process Control</entry>
+        <entry key="strIForest">Isolation Forest</entry>
+        <entry key="strRRCForest">RRC Forest</entry>
+        <entry key="strOCSVM">One Class SVM</entry>
+        <entry key="strTCN">TCN</entry>
+        <entry key="strLOF">LOF</entry>
+        <entry key="strUsAD">UsAD</entry>
+        <entry key="strDeepAnT">DeepAnT</entry>
+        <entry key="strVAELSTM">VAE-LSTM</entry>
+        <entry key="strCNNAE">CNN-AE</entry>
+        <entry key="strLSTMAE">LSTM-AE</entry>
+        <entry key="strLSTMF">LSTM-Forecaster</entry>
+        <entry key="tipVAELSTM">Detector using a combination of variational autoencoder and LSTM to learn multiscale temporal dependencies and reconstruct normal data</entry>
+        <entry key="tipTCN">Temporal convolutional network based detector that learns to reconstruct windowed normal time series data</entry>
+        <entry key="tipUsAD">Two fully connected layers based autoencoders with a common encoder that use both a reconstruction and adversarial training to learn to reconstruct windowed normal time series data</entry>
+        <entry key="tipSPC">Detector using batch-mean decorrelation and statistical process control rules to identify out-of-control behavior</entry>
+        <entry key="tipIForest">Detector using feature extraction on windowed time series anomaly detector to train an isolation forest to learn a tree structure with deeper splits for normal feature vectors</entry>
+        <entry key="tipRRCForest">Detector using feature extraction on windowed time series anomaly detector to train a robust random cut forest using normal feature vectors such that anomalies are identified by how much the insertion of a point disrupts the tree structure</entry>
+        <entry key="tipOCSVM">Detector using feature extraction on windowed time series anomaly detector to train a one-class SVM to estimate the boundary of the normal feature manifold in high-dimensional space</entry>
+        <entry key="tipLOF">Detector using feature extraction on windowed time series anomaly detector to train a Local Outlier Factor model to learn the density distribution of normal feature vectors</entry>
+        <entry key="tipDeepAnT">1-D Convolution network based detector that learns to forecast windowed normal time series data</entry>
+        <entry key="tipCNNAE">A CNN auto-encoder based detector that learns to reconstruct normal time series data</entry>
+        <entry key="tipLSTMAE">A bidirectional LSTM auto-encoder based detector that learns to reconstruct normal time series data</entry>
+        <entry key="tipLSTMF">An LSTM forecaster based detector that learns to forecast normal time series data</entry>
+
+        <!-- Train and Detect config panel tooltips -->
+        <entry key="configTooltipWindowLength">Number of data points in each analysis window</entry>
+        <entry key="configTooltipMethod">Technique used to calculate control limits</entry>
+        <entry key="configTooltipLambda">Weight for smoothing recent data changes</entry>
+        <entry key="configTooltipDetectionRules">Conditions for flagging anomalies</entry>
+        <entry key="configTooltipLevel">Confidence level for control limits</entry>
+        <entry key="configTooltipCenterLine">Baseline value for normal process behavior</entry>
+        <entry key="configTooltipStandardError">Estimated variability of the process</entry>
+        <entry key="configTooltipMean">Average value used for control limits</entry>
+        <entry key="configTooltipSigma">Standard deviation for setting limits</entry>
+
+        <!-- Timeseries OCSVM -->
+        <entry key="configTooltipIterationLimit">Maximum training steps allowed</entry>
+        <entry key="configTooltipBetaTolerance">Precision for beta parameter updates</entry>
+        <entry key="configTooltipGradientTolerance">Stop training when gradient is this small</entry>
+        <entry key="configTooltipTrainingStride">Step size for selecting training windows</entry>
+        <entry key="configTooltipFeatureExtraction">Method to convert time series into features</entry>
+        <entry key="configTooltipNormalizeData">Scale data to a common range</entry>
+        <entry key="configTooltipKernelScale">Controls flexibility of the decision boundary</entry>
+        <entry key="configTooltipNumberOfExpansionDimensions">Extra dimensions for feature mapping</entry>
+        <entry key="configTooltipLambdaOCSVM">Regularization strength to prevent overfitting</entry>
+        <entry key="configTooltipDetectionStride">Step size for scanning anomalies</entry>
+        <entry key="configTooltipThresholdMethod">How anomaly score cutoff is chosen</entry>
+        <entry key="configTooltipThresholdParameter">Value that adjusts sensitivity</entry>
+        <entry key="configTooltipThreshold">Score above which data is flagged</entry>
+
+        <!-- Timeseries Local Outlier Factor -->
+        <entry key="configTooltipIncludeTies">Whether equal distances count as neighbors</entry>
+        <entry key="configTooltipSearchMethod">Algorithm for finding nearest neighbors</entry>
+        <entry key="configTooltipNumberOfNeighbors">How many points define “local” behavior</entry>
+        <entry key="configTooltipDistance">Metric for measuring similarity</entry>
+        <entry key="configTooltipNumberOfObservationsPerLearner">Samples per tree used during training.</entry>
+        <entry key="configTooltipUseParallel">Run training on multiple cores for faster processing.</entry>
+        <entry key="configTooltipNumberOfLearners">Number of trees used in the forest model.</entry>
+
+        <!-- Common Deep Learning Parameters -->
+        <entry key="configTooltipMaxEpochs">Number of full passes through training data</entry>
+        <entry key="configTooltipInitialLearnRate">Speed of weight updates during training</entry>
+        <entry key="configTooltipMiniBatchSize">Number of samples per training step</entry>
+        <entry key="configTooltipExecutionEnvironment">Device used (CPU/GPU)</entry>
+        <entry key="configTooltipSolverName">Optimization algorithm for training</entry>
+        <entry key="configTooltipObservationWindowLength">Size of input sequence for the model</entry>
+        <entry key="configTooltipFilterSize">Width of convolution filters</entry>
+        <entry key="configTooltipNumberOfFilters">How many filters extract features</entry>
+        <entry key="configTooltipDropoutProbability">Chance of ignoring neurons to prevent overfitting</entry>
+        <entry key="configTooltipDownsampleFactor">Rate of reducing data size in layers</entry>
+        <entry key="configTooltipNumberOfDownsampleLayers">Layers that shrink data representation</entry>
+        <entry key="configTooltipEncoderHiddenUnits">Size of hidden layers in encoder</entry>
+        <entry key="configTooltipDecoderHiddenUnits">Size of hidden layers in decoder</entry>
+        <entry key="configTooltipForecastSteps">Number of future points predicted</entry>
+        <entry key="configTooltipLatentSpaceSize">Dimension of compressed representation</entry>
+        <entry key="configTooltipNumberOfHiddenUnits">Size of LSTM hidden layers</entry>
+        <entry key="configTooltipDetectionWindowLength">Size of segment for anomaly scoring</entry>
+        <entry key="configTooltipWindowLossAggregation">How errors are combined for detection</entry>
+
+        <!-- Train All dialog -->
+        <entry key="strTrainAll">Train\nAll</entry>
+        <entry key="descTrainAll">Sequentially trains all the untrained detectors and the detectors with unapplied training configurations</entry>
+        <entry key="strTrainAllTitle">Multi Detector Training</entry>
+        <entry key="strDetectorInTraining">Detector in Training:</entry>
+        <entry key="strTraining">Training Data Set</entry>
+        <entry key="strProgress">Progress</entry>
+        <entry key="strStart">Start</entry>
+        <entry key="strNoPlotLabel">No training loss plot is available for machine learning‑based detectors.</entry>
+        <entry key="strDetectorSelection">Detector Selection</entry>
+        <entry key="strTimeElapsed">Time Elapsed</entry>
+        <entry key="strQueued">Queued</entry>
+        <entry key="strTrainingOn">Training...</entry>
+        <entry key="strErrored">Errored</entry>
+        <entry key="strStopAll">Stop All</entry>
+        <entry key="strCanceled">Canceled</entry>
+        <entry key="strUnappliedConfig">Unapplied Configurations</entry>
+        <entry key="strDefaultLossPlot">Click the Start button to view the loss plot for deep learning‑based detectors.</entry>
+        <entry key="strReopenLabel">Close the dialog and reopen it to train new detectors.</entry>
+        <entry key="strConfirmCloseTitle">Confirm Close</entry>
+        <entry key="strCloseConfirmMsg">Training is in progress. Closing will cancel the remaining queued models. Do you wish to proceed?</entry>
+        <entry key="strStopAndClose">Stop and Close</entry>
+        <entry key="strCancel">Cancel</entry>
+        <entry key="strClosingMsg">Current detector is finishing training. Please wait.</entry>
+        <entry key="strStopping">Stopping...</entry>
+        <entry key="strNoTrainableDetectorsTitle">No Detectors to Train</entry>
+        <entry key="strNoTrainableDetectorsMsg">No untrained detectors are available. Add an untrained detector and try again.</entry>
+    </message>
+</rsccat>

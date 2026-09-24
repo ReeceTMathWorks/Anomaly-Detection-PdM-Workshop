@@ -1,6 +1,6 @@
-%[text] # Exercise 2 Solution: Build Pump-Fleet Detectors with the App
+%[text] # Exercise 2 Work: Build Pump-Fleet Detectors with the App
 %[text] This solution prepares labeled app data, loads detector checkpoints, and verifies compatibility with one detection run.
-%[text:tableOfContents]{"heading":"**Table of Contents**"}
+%[text:tableOfContents]{"heading":"Table of Contents"}
 %[text] ## 
 %%
 %[text] ## Set Up Exercise
@@ -66,6 +66,14 @@ timeSeriesAnomalyDetector
 %%
 %[text] ## Optional: Load Detector Checkpoint
 %[text] The remaining sections are an optional programmatic validation of a few trained detectors. 
+%[text] %[text:anchor:TMP_45ed] Parameters used for the trained detectors:
+%[text:table]
+%[text] | Detector | Key Parameters |
+%[text] | --- | --- |
+%[text] | UsAD | `ObservationWindowLength = 120`, `TrainingStride = 120`, `LatentSpaceDim = 32` |
+%[text] | DeepAnT | `ObservationWindowLength = 120`, `TrainingStride = 120, DetectionWindowLength = 10`, `NumFilters = 32` |
+%[text] | Isolation Forest | `WindowLength = 120`, `TrainingStride = 120`, `NumLearners = 300` |
+%[text:table]
 load(fullfile(moduleFolder,"Checkpoints","trainedPumpDetectors.mat"))
 detectors = {detectorUsAD, detectorDeepAnt, detectorIForest};
 detectorNames = ["usAD","deepantAD","iforest"];
@@ -125,14 +133,7 @@ bestDetectionResult = detect(bestDetector,testData{bestAssetIndex},Resolution="s
 plotProgrammaticDetectorComparison(testData{bestAssetIndex},testLabels{bestAssetIndex},bestDetectionResult.Labels, ...
     string(selectedTestAssets{bestAssetIndex}),[1 2 4 6],bestModelName)
 %%
-%[text] ## App Parameters Used for the Checkpoint
-%[text:table]
-%[text] | Detector | Key Parameters |
-%[text] | --- | --- |
-%[text] | UsAD | `ObservationWindowLength = 120`, `TrainingStride = 120`, `LatentSpaceDim = 32` |
-%[text] | DeepAnT | `ObservationWindowLength = 120`, `DetectionWindowLength = 10`, `NumFilters = 32` |
-%[text] | Isolation Forest | `WindowLength = 120`, `TrainingStride = 120`, `NumLearners = 300` |
-%[text:table]
+%[text] ## Helper Functions
 function plotProgrammaticDetectorComparison(testDataAsset,actualLabels,predictedLabels,assetName,channelIdx,detectorName)
 
 channelNames = string(testDataAsset.Properties.VariableNames(channelIdx));

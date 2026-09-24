@@ -1,4 +1,4 @@
-%[text] %[text:anchor:T_81591A8C] # Feature Extraction for Pump Fault Classification
+%[text] %[text:anchor:T_81591A8C] # Exercise 1 Solution: Feature Extraction for Pump Fault Classification
 %[text] To train a machine learning model to detect faults in operational data, you need to extract the best features to train your model. In this example, you will learn to interactively explore, extract, and rank features interactively using the Diagnostic Feature Designer app. Then, you will generate a MATLAB function that can regenerate these features on new data, and use them to train a machine learning model to identify faults in new pump data.
 %[text] ## How to use videos in this script
 %[text] This exercise contains videos that demo how to use MATLAB Apps. There is **no audio** in these videos. 

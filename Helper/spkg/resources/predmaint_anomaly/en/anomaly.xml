@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rsccat version="1.0" locale="en_US" product="predmaint_anomaly" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schema/msgcat.xsd">
+    <!-- Copyright 2024-2026 The MathWorks, Inc. -->
+    <message>
+        <!-- Utils -->
+        <entry key="errNotEqualSizeNorEmpty" context="error">Input vectors must either be the same size or empty.</entry>
+        <entry key="errNoDeepLearningLicense">The use of deep time series anomaly detectors requires the Deep Learning Toolbox.</entry>
+
+        <!-- Abstract deep anomaly detection -->
+        <entry key="errInvalidData" context="error">Invalid data type. Data must be a vector, matrix, timetable, or cell array containing real values.</entry>
+        <entry key="errInvalidCPUEnvironment" context="error">Invalid "ExecutionEnvironment" setting. For input data of type "gpuArray", set "ExecutionEnvironment" to "gpu" or "auto".</entry>
+        <entry key="errInvalidGPUEnvironment" context="error">GPU support requires Parallel Computing Toolbox and compatible GPU device.</entry>
+
+        <entry key="errInvalidCombThreshold" context="error">"ThresholdMethod" must be set to "manual" when "Threshold" value is not empty.</entry>
+        <entry key="errInvalidCombThresholdFunction" context="error">"ThresholdFunction" value required when "ThresholdMethod" is set to "customFunction".</entry>
+        <entry key="errInvalidCombThresholdParameter" context="error">"ThresholdParameter" value required when "ThresholdMethod" is set to "contaminationFraction", "max", "mean", "median", or "kSigma".</entry>
+        <entry key="errInvalidNormalization" context="error">"Normalization" must be set to "zscore", "range", or "off".</entry>
+
+        <entry key="errEmptyThres" context="error">"Threshold" value must not be empty when "ThresholdMethod" is set to "manual".</entry>
+        <entry key="errEmptyThresFunc" context="error">"ThresholdFunction" value must not be empty when "ThresholdMethod" is set to "customFunction".</entry>
+        <entry key="errEmptyThresPara" context="error">"ThresholdParameter" value must not be empty when "ThresholdMethod" is set to "{0}".</entry>
+
+        <entry key="errInvalidThresFun" context="error">"ThresholdFunction" value must be a function_handle object when "ThresholdMethod" is set to "customFunction".</entry>
+        <entry key="errInvalidThresParaCF" context="error">When "ThresholdMethod" is set to "contaminationFraction", "ThresholdParameter" value must be a positive real scalar less than 0.5.</entry>
+        <entry key="errInvalidThresPara" context="error">When "ThresholdMethod" is set to "{0}", "ThresholdParameter" value must be a positive real scalar.</entry>
+        <entry key="errUpdateDetector" context="error">"{0}" is read-only property. Use updateDetector function to update the property.</entry>
+
+        <entry key="errInvalidTTData" context="error">Timetable data must be numeric, real, and non-sparse.</entry>
+        <entry key="errNonHomogeneousTT" context="error">Timetable variables must be homogeneous.</entry>
+
+        <!-- deepAnT -->
+        <entry key="errNoDataProvided" context="error">Not enough input arguments. Data must be specified to compute new "Threshold" value when "ThresholdMethod" not set to "manual".</entry>
+        <entry key="errInvalidNetworkConv" context="error">Not enough sequence length after convolution in down-sampling phase {0}. Increase "ObservationWindowLength" or decrease "FilterSize".</entry>
+        <entry key="errInvalidNetworkMaxP" context="error">Not enough sequence length after max-pooling in down-sampling phase {0}. Increase "ObservationWindowLength" or decrease "FilterSize".</entry>
+        <entry key="warnNoNeedData">When "ThresholdMethod" is set to "manual", input data is not used to compute the "Threshold" value.</entry>
+
+        <entry key="msgComputingThreshold" context="uistring">Computing threshold...</entry>
+        <entry key="msgFinishThreshold" context="uistring">Threshold computation completed.</entry>
+
+        <!-- VAE-LSTM -->
+        <entry key="warnWindowLength">Invalid input combination. "ObservationWindowLength" must be divisible by "DetectionWindowLength".</entry>
+        <entry key="errWindowLength">Invalid input combination. "ObservationWindowLength" value must be at least twice the value of "DetectionWindowLength".</entry>
+        <entry key="msgVaeTrainingStarting">VAE training in progress...</entry>
+        <entry key="msgVaeTrainingFinished">VAE training completed.</entry>
+        <entry key="msgLSTMTrainingStarting">LSTM training in progress...</entry>
+        <entry key="msgLSTMTrainingFinished">LSTM training completed.</entry>
+        <entry key="msgLSTMDataPrep">Preparing data for LSTM training...</entry>
+        <entry key="warnGPUNotSupported">GPU not supported for VAE-LSTM network. Using CPU instead.</entry>
+        <entry key="errInvalidLayerParam" context="error">The length of "{0}" must equal the number of layers specified by "{1}".</entry>
+        <entry key="miniBatchSizeSmallerThanNumWorkers" note="">The trainingOptions 'MiniBatchSize' value must be greater than or equal to the number of workers in the parallel pool. Use parpool function to set the value for number of workers.</entry>
+
+        <!-- USAD -->
+        <entry key="errAlphaBetaSum">Invalid input combination. Sum of "alpha" and "beta" must be 1.</entry>
+
+        <!-- SPC AD -->
+        <entry key="errNumChannels">Number of channels in each data member must be {0}.</entry>
+        <entry key="errMaxWindowLength">The window length must be less than or equal to the number of data rows ({0}).</entry>
+        <entry key="errMaxStrideLength">The stride length must be less than or equal to the number of data rows ({0}).</entry>
+        <entry key="strIndividualsChartTitle">Individuals Control Chart</entry>
+        <entry key="strEWMAChartTitle">EWMA Control Chart</entry>
+        <entry key="strBatchMeansSignal">Batch-Means Signal</entry>
+        <entry key="strCenterline">Centerline</entry>
+
+        <!-- Plotting -->
+        <entry key="errInvalidBatchInput">Plotting for batch test data is not supported. Input data must contain single-sample test data.</entry>
+        <entry key="strPATitle" context="uistring">Detected Anomalies</entry>
+        <entry key="strPATitleNoAnomaly" context="uistring">No Anomalies Detected</entry>
+        <entry key="strRawSignal" context="uistring">Raw Signal</entry>
+        <entry key="strAnomalies" context="uistring">Anomalies</entry>
+        <entry key="strPAXLabel" context="uistring">Samples</entry>
+        <entry key="strSignal" context="uistring">Signal</entry>
+        <entry key="strSamples" context="uistring">Samples</entry>
+        <entry key="strTime" context="uistring">Time</entry>
+        <entry key="strTimeSeriesTitle" context="uistring">Time Series</entry>
+        <entry key="strLabeledAnomalies" context="uistring">Labeled Anomalies</entry>
+        <entry key="strDetectedAnomalies" context="uistring">Detected Anomalies</entry>
+
+        <entry key="strThreshold" context="uistring">Threshold</entry>
+        <entry key="strAnomalyScores" context="uistring">Anomaly Scores</entry>
+        <entry key="strScore" context="uistring">Score</entry>
+        <entry key="strWindowIndex" context="uistring">Window Index</entry>
+        <entry key="strWindowStartIndex" context="uistring">Window Start Index</entry>
+
+        <entry key="strPLDYLabel1" context="uistring">Probability (Histogram)</entry>
+        <entry key="strPLDYLabel2" context="uistring" note="Do not translate">CDF</entry>
+        <entry key="strPLDTitle" context="uistring">Anomaly Score Distribution</entry>
+        <entry key="strChannel" context="uistring">Channel</entry>
+
+        <!-- Synthetic Anomaly Injection -->
+        <entry key="errHeterogenousCellArray" context="error">Cell array elements are not the same data type.</entry>
+        <entry key="errWindowStringValue" context="error">{0} needs to be "{1}" if non-numeric.</entry>
+        <entry key="errMultipleAnomalyWindowParams" context="error">For multiple anomaly types, WindowLength and WindowStart need to have the same length as the number of anomaly types.</entry>
+        <entry key="errMultipleWindowParams" context="error">If WindowStart and WindowLength are vectors, then they have to be of the same length.</entry>
+        <entry key="errWindowParamTooLarge" context="error">{0} has to be less than the length of signal</entry>
+        <entry key="errMultipleVariablesTT" context="error">When the input signal is a timetable with multiple columns, you must specify the VariableName name-value argument.</entry>
+        <entry key="errAccessTTVariable" context="error">Unable to access specified VariableName from the input timetable.</entry>
+        <entry key="errInputDatatype" context="error">Input has to be matrix, timetable or homogeneous cell array of the same.</entry>
+        <entry key="errStringStartForVectorLength" context="error">If WindowLength is a vector and WindowStart is a scalar, then WindowStart must be set to "Random".</entry>
+        <entry key="errBurstWithFullWindow" context="error">Burst parameters cannot be specified when Type is FullWindow.</entry>
+        <entry key="errBurstTooLong" context="error">BurstDuration has to be less than or equal to WindowLength.</entry>
+        <entry key="errTooManyOutliers" context="error">NumOutliers must not exceed the WindowLength.</entry>
+        <entry key="errStuckAtNVCombo" context="error">Value can be specified only when Type is Custom.</entry>
+        <entry key="errInvalidCellInput" context="error">Input cell array must be non-empty and contain valid elements.</entry>
+        <entry key="errHeterogenousCellInput" context="error">Each cell element must be either a numeric row/column vector or a timetable with numeric variables only.</entry>
+        <entry key="errInvalidInput" context="error">Input must be either a numeric row/column vector, a timetable with numeric variables only, or a cell array containing only those types.</entry>
+        <entry key="errInvalidTTInput" context="error">All timetable variables must be numeric.</entry>
+        <entry key="errSignalTooShort" context="error">Input signal is too short for the specified WindowLength. Signal length must be greater than {0}.</entry>
+        <entry key="errInputNotReal" context="error">Input time series must contain real values only.</entry>
+        <entry key="errInputNotFloat" context="error">Input time series must be of type double or single.</entry>
+
+        <!-- Metric Evaluation -->
+        <entry key="errLabelNotSubset" context="error">All values in "NormalClassLabel" must belong to the ground truth label set.</entry>
+        <entry key="errSizeMismatch" context="error">The data in the input cells "{0}" and "{1}" must have the same length.</entry>
+        <entry key="errLabelDataType" context="error">Ground truth labels must be numeric, string, categorical, or logical values.</entry>
+        <entry key="errLabelNonNan" context="error">Ground truth labels must not be NaN.</entry>
+        <entry key="errNoValidPrediction" context="error">All scores in {0} are NaN. No valid prediction for metrics calculation.</entry>
+        <entry key="warnNoNormalLabel">"NormalClassLabel" is not in the ground truth label input. All ground truth labels will be treated as anomalous classes. Use Name-value pair "NormalClassLabel" to specify the normal class label set.</entry>
+        <entry key="warnHasNaNScore">Input data Scores contains NaN values. Corresponding predicted labels and ground truth labels will be ignored when computing metrics.</entry>
+
+        <entry key="warnUnsupervisedAllZero">Some metrics are undefined because all predictions are normal.</entry>
+        <entry key="warnUnsupervisedAllOne">Some metrics are undefined because all predictions are anomalies.</entry>
+        <entry key="warnUnsupervisedOneSample">KL divergence is undefined because one of the classes has only one sample.</entry>
+        <entry key="warnPrecisionSetToZero">Precision is undefined and being set to 0 because all predictions are normal and the ground truth contains anomalies.</entry>
+        <entry key="warnPrecisionSetToOne">Precision is undefined and being set to 1 because all ground truth labels are normal, and all predictions are normal.</entry>
+        <entry key="warnRecallSetToZero">Recall is undefined and being set to 0 because all ground truth labels are normal, but predictions contains anomalies.</entry>
+        <entry key="warnRecallSetToOne">Recall is undefined and being set to 1 because all ground truth labels are normal, and all predictions are normal.</entry>
+        <entry key="warnF1SetToOne">F1 score is undefined and being set to 1 because all ground truth labels are normal, and all predictions are normal.</entry>
+        <entry key="warnFprSetToZero">False positive rate is undefined and being set to 0 because all ground truth labels are anomalies.</entry>
+
+        <!-- Abstract machine learning anomaly detection -->
+        <entry key="warnNoFeatureExtraction">Feature extraction is skipped because the window length is set to 1.</entry>
+        <entry key="warnUnusedLabelConversionMethod">"LabelConversionMethod" is specified but will only be used when Resolution is "sample". The result will still be at the window level.</entry>
+        <entry key="warnUnusedAnomalousWindowPercentage">"AnomalousWindowPercentage" is specified but will only be used when Resolution is "member".</entry>
+        <entry key="errInvalidCellMemberType">Input data must not be a cell array of GPU arrays.</entry>
+
+        <!-- Time Series Anomaly detection Processing -->
+        <entry key="errNotTrained" context="error">Detector model must be trained. Use train function to train the detector.</entry>
+        <entry key="errInvalidCellElement" context="error">Input data must be a cell array of matrices or timetables.</entry>
+        <entry key="errInconsistentColNames" context="error">All timetables in the cell array should share the same column names.</entry>
+        <entry key="errUnsortedTT" context="error">Timetable must be sorted.</entry>
+        <entry key="errUniformTT" context="error">Timetable must be uniformly sampled.</entry>
+
+        <!-- Time series OCSVM -->
+        <entry key="errInvalidLambda" context="error">"Lambda" must be "auto" or a nonnegative scalar.</entry>
+        <entry key="errInvalidDimension" context="error">"NumExpansionDimensions" must be "auto" or a nonnegative integer scalar.</entry>
+        <entry key="errInvalidKernel" context="error">"KernelScale" must be "auto" or a positive scalar.</entry>
+
+        <!-- Time series LOF -->
+        <entry key="errInvalidCacheSize" context="error">"CacheSize" must be "maximal" or a positive scalar.</entry>
+
+        <!---Code generation-->
+        <entry key="InvalidInputToUpdateDetectorCG">For code generation of "updateDetector" method, set "ThresholdMethod" option to "manual" and supply a real scalar value for "Threshold".</entry>
+        <entry key="optionMustBeConst">Input ''{0}'' must be constant during code generation.</entry>
+        <entry key="cellInputToDetectMustBeFixedSize">For code generation, cell input to detect method must be fixed-size.</entry>
+        <entry key="UpdateDetectorIgnoresData">In code generation, "data" supplied to "updateDetector" method is ignored.</entry>
+    </message>
+</rsccat>
+
+<!-- LocalWords: VAE LSTM parpool USAD SPC EWMA OCSVM LOF -->

@@ -1,0 +1,16 @@
+{
+  "mw": {
+    "addons": {
+      "identifier": "TSANOMALY",
+      "previewImage": "TSADPreviewImage.png",
+      "setup": "",
+      "gettingStarted": {
+        "gettingStartedInput": "TSANOMALY"
+      },
+      "provider": {
+        "name": "MathWorks",
+        "icon": "matlabLogoUI"
+      }
+    }
+  }
+}
