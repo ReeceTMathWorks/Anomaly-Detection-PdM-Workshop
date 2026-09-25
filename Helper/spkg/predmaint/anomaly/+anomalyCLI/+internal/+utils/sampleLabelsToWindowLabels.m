@@ -9,11 +9,12 @@ function winLabels = sampleLabelsToWindowLabels(labels, windowLength, stride, ob
 
 numMembers = numel(labels);
 winLabels = cell(size(labels));
-handler = anomalyAPP.internal.app.modelmanager.utils.mapDetectorToHandler(modelType);
+
 for i = 1:numMembers
     sampleLabels = labels{i};
-    numWindows = handler.getNumWindows(windowLength, stride, observationWinLength, size(sampleLabels,1));
     if ismember(modelType, ["cnnae", "lstmae", "lstmf"])
+        numWindows = ceil(size(sampleLabels, 1) / stride);
+
         % Preallocate cell array
         windowInputData = cell(numWindows, 1);
 
@@ -23,14 +24,15 @@ for i = 1:numMembers
             windowInputData{iWin, 1} = sampleLabels(startIdx:endIdx);
         end
     elseif modelType=="vaelstm"
-        % For VAELSTM models, the windowLength is the VAE window length. We
-        % need to compute the actual window length used to get the windows
         vaeWindowLength = windowLength;
         lstmWindowLength = floor(observationWinLength/vaeWindowLength);
         windowLength  = vaeWindowLength*lstmWindowLength;
-        windowInputData = anomalyCLI.internal.utils.createRollingWindows(sampleLabels, windowLength, stride, NumWindows=numWindows);
+        numWindows=floor((size(sampleLabels,1) - windowLength)/stride) + 1;
+        windowInputData = anomalyCLI.internal.utils.createRollingWindows(sampleLabels, windowLength, stride, NumWindows = numWindows);
     else
-        windowInputData = anomalyCLI.internal.utils.createRollingWindows(sampleLabels(observationWinLength+1:end), windowLength, stride, NumWindows=numWindows);
+        numWindows = floor((size(sampleLabels, 1) - observationWinLength - windowLength)/stride) + 1;
+        % get training window input
+        windowInputData = anomalyCLI.internal.utils.createRollingWindows(sampleLabels(observationWinLength+1:end), windowLength, stride, "NumWindows", numWindows);
     end
 
     winLabels{i} = cellfun(@any, windowInputData);

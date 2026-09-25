@@ -25,7 +25,7 @@ size(testDataLabeled{1})
 %%
 %[text] ## Open HTML Page of This Exercise
 %[text] The next section contains many screenshots to guide you. For ease of switching back and forth, you can open an HTML version of this page in a new browser tab.
-web('Work_PumpFleetDetectorApp.html', '-browser')
+web(fullfile(moduleFolder,'Work_PumpFleetDetectorApp.html'), '-browser')
 %%
 %[text] ## Load Data Into App
 %[text] Load the unlabeled training data (all normal behavior) and labeled test data (contains anomalies) into the Time Series Anomaly Detector app.
