@@ -4,8 +4,8 @@
 setupWorkshop
 %%
 %[text] ### Links to Exercise Files
-%[text] [Exercise 1: Feature Extraction and Fault Classification](file:\01-FeatureExtractionFaultClassification\Work_FeatureExtraction.m)
-%[text] [Exercise 2: Train and Evaluate Unsupervised Anomaly Detection Models](file:.\02-PumpFleetAnomalyDetector\Work_PumpFleetDetectorApp.m)
+%[text] [Exercise 1: Feature Extraction and Fault Classification](file:./01-FeatureExtractionFaultClassification\\Work_FeatureExtraction.m)
+%[text] [Exercise 2: Train and Evaluate Unsupervised Anomaly Detection Models](file:./02-PumpFleetAnomalyDetector\\Work_PumpFleetDetectorApp.m)
 %[text] 
 
 %[appendix]{"version":"1.0"}
